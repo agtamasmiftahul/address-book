@@ -16,12 +16,14 @@ function addContact() {
   var phoneA = phoneInput.value;
   var addressA = addressInput.value;
   var mailA = mailInput.value;
+
   contact.push({
-    'name': name,
-    'phone': phone,
-    'address': address,
-    'mail': mail
+    'name': nameA,
+    'phone': phoneA,
+    'address': addressA,
+    'mail': mailA
   });
+
   name = nameA;
   phone = phoneA;
   address = addressA;
