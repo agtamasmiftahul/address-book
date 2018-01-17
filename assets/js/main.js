@@ -5,6 +5,7 @@ var mailInput = document.getElementById(`email`);
 var addButton = document.getElementById(`add-button`);
 var table = document.getElementById(`address-book`);
 var searchInput = document.getElementById(`search`)
+
 var contact = [];
 var name;
 var phone;
@@ -69,6 +70,7 @@ function search() {
     }
   }
 }
+
 
 addButton.addEventListener(`click`, addRow);
 searchInput.addEventListener(`keyup`, search);
