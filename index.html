@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Address Book</title>
+  <!-- Normalize CSS -->
+  <link rel="stylesheet" href="./assets/css/normalize.min.css">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Quicksand:400,500,700" rel="stylesheet">
+
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css" media="screen,projection" />
+
+  <!-- Import dattables -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12 center">
+        <h3 class="margin-title">Address Book</h3>
+        <div class="row">
+          <div class="col s12">
+            <div class="card grey lighten-5">
+              <div class="card-image">
+                <span class="card-title">Card Title</span>
+                <a class="btn-floating btn-large halfway-fab waves-effect waves-light green modal-trigger" href="#modal-add"><i class="material-icons">add</i></a>
+                <div id="modal-add" class="modal">
+                  <div class="modal-content">
+                    <h4>Add Contacts</h4>
+                    <div class="input-field col s12">
+                      <i class="material-icons prefix">account_circle</i>
+                      <input id="name" type="text" class="validate">
+                      <label for="name">Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                      <i class="material-icons prefix">phone</i>
+                      <input id="phone" type="tel" class="validate">
+                      <label for="phone">Phone</label>
+                    </div>
+                    <div class="input-field col s12">
+                      <i class="material-icons prefix">location_on</i>
+                      <input id="address" type="text" class="validate">
+                      <label for="address">Address</label>
+                    </div>
+                    <div class="input-field col s12">
+                      <i class="material-icons prefix">mail</i>
+                      <input id="email" type="email" class="validate">
+                      <label for="email" data-error="Invalid Email Format" data-success="Available">E-mail</label>
+                    </div>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Add</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <table class="striped mdl-data-table" id="address-book">
+                  <thead class="blue-text">
+                    <tr>
+                      <th>Number</th>
+                      <th>Name</th>
+                      <th>Phone</th>
+                      <th>Address</th>
+                      <th>Mail</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Eclair</td>
+                      <td>089111222333</td>
+                      <td>Kemang</td>
+                      <td>eclair@gmail.com</td>
+                    </tr>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="./assets/js/materialize.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" charset="utf-8"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js" charset="utf-8"></script>
+  <script src="./assets/js/main.js" charset="utf-8"></script>
+</body>
+
+</html>

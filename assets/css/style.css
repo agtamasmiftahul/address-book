@@ -1,0 +1,12 @@
+html {
+  font-family: 'Quicksand';
+}
+
+.margin-title {
+  margin-bottom: 50px;
+}
+
+.font-bold {
+  font-weight: bolder;
+  font-size: 1.3em;
+}
