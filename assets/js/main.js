@@ -5,6 +5,7 @@ var mailInput = document.getElementById(`email`);
 var addButton = document.getElementById(`add-button`);
 var table = document.getElementById(`address-book`);
 var searchInput = document.getElementById(`search`)
+var deleteRow = document.getElementById(`delete-row`)
 
 var contact = [];
 var name;
@@ -34,22 +35,27 @@ function addContact() {
 function addRow() {
 
   addContact();
-  var row = table.insertRow(2);
+  var row = table.insertRow(1);
 
   var cellName = row.insertCell(0);
   var cellPhone = row.insertCell(1);
   var cellAddress = row.insertCell(2);
   var cellMail = row.insertCell(3);
+  var cellAction = row.insertCell(4);
 
   cellName.innerHTML = name;
   cellPhone.innerHTML = phone;
   cellAddress.innerHTML = address;
   cellMail.innerHTML = mail;
+  cellAction.innerHTML = `<i id="delete-row" class="material-icons prefix delete-icon">delete_forever</i>`
 
   cellName.className = `center`;
   cellPhone.className = `center`;
   cellAddress.className = `center`;
   cellMail.className = `center`;
+  cellAction.className = `center`;
+
+  row.id = name;
 }
 
 function search() {
