@@ -29,6 +29,7 @@ function addContact() {
   phone = phoneA;
   address = addressA;
   mail = mailA;
+
 }
 
 function addRow() {
@@ -46,7 +47,7 @@ function addRow() {
   cellPhone.innerHTML = phone;
   cellAddress.innerHTML = address;
   cellMail.innerHTML = mail;
-  cellAction.innerHTML = `<i class="material-icons prefix delete-icon">delete_forever</i>`
+  cellAction.innerHTML = `<i onclick="deleteRow(this.parentNode.parentNode.rowIndex)" class="material-icons prefix delete-icon">delete_forever</i>`
 
   cellName.className = `center`;
   cellPhone.className = `center`;
@@ -74,6 +75,10 @@ function search() {
       }
     }
   }
+}
+
+function deleteRow(i) {
+  table.deleteRow(i)
 }
 
 addButton.addEventListener(`click`, addRow);
